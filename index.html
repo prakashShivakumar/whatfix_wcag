@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script language='javascript' async='true' type='text/javascript' src='//cdn.whatfix.com/prod/d31d6cd0-14c3-11e9-812c-04013d24cd02/embed/embed.nocache.js'></script>
+    
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="#" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Login Page</title>
+  </head>
+  <body bgcolor=#AEB6BF> 
+  <h1 style="font-family:Comic Sans Ms;text-align:left;font-size:20pt;color:block;margin-left: 5%;">Login Page</h1>
+  <form name="login" style="margin-left: 5%;font-weight: bold;">
+    <label for="userid"> UserName </label><input type="text" id="userid" style="background-color: #D5D8DC"/>
+    <label for="Password"> Password </label><input type="password" id="Password" style="background-color: #D5D8DC" />
+    <input script type="button" onclick="check(this.form)" value="Login"/>
+    <input type="reset" value="Cancel"/>
+    <a style="padding:1% 1% 1% 1%;margin-left:3%;" href="#" id="bell" aria-label="bell"/><i class="fa fa-bell" ></i></a>
+    <a style="padding:1% 1% 1% 1%;margin-left:3%;" href="#" id="battery" aria-label="battery"/><i class="fa fa-battery-full"></i></a>
+    <a style="padding:1% 1% 1% 1%;margin-left:3%;" href="#" id="gift" aria-label="gift"/><i class="fa fa-calendar"></i><br></a>
+  </form>
+  <script language="javascript">
+  function check(form)
+  {
+    if(form.userid.value == "manasa" && form.pswrd.value == "whatfix@123")
+    {
+     window.open('2.html', '_self');
+    }
+    else
+   {
+    alert("Error Password or Username")
+  }
+  </script>
+  <hr>
+   <div style="padding-left: 2%;margin-left: 3%;font-weight: bold;">
+      <ul>
+        <li style="padding-right: 2%;"><a href="index.html?#bookings" onClick="history.go(0)" VALUE="Refresh">Login</a></li>
+        <li style="padding-right: 2%;"><a href="productivity.html" target="blank">Productivity-tool</a></li>
+      </ul> 
+    </div>
+  <div style="margin-left: 5%;">
+    <h1>Fill The Form :</h1>
+    <label for="FirstName"> FirstName: </label><input type="text" id="FirstName" style="background-color: #D5D8DC">
+    <label for="LastName"> LastName: </label><input type="text" id="LastName" style="background-color: #D5D8DC">
+    <br><br>
+    <div style="height:100px;font-size:14pt;max-width: 2%">
+      <label for="address" style="margin-right: 3%;"> Address: </label><textarea rows="4" id="address" cols="53" style="background-color: #D5D8DC"></textarea>
+      <br><br>
+      <label for="description" style="margin-right: 1%"> Description:</label> <textarea rows="4" id="description" cols="50" style="background-color: #D5D8DC"></textarea>  
+      <br><br>
+      <label style="margin-right: 2%" for="summary"> Summary: </label><textarea id="summary" rows="4" cols="51" style="background-color: #D5D8DC"></textarea>
+      <br><br>
+    </div>
+    <div style="height:200px;font-size:14pt;margin-top: 15%">
+      <br><br>
+      <label for="gender"> Select-Gender :</label><br>
+      <form>
+            <form id="radio_btn_select">
+                <input type = "radio"name = "radSize"id = "sizeSmall"value = "small"checked = "checked" /><label for = "sizeSmall">Male</label>
+                <input type = "radio" name = "radSize"id = "sizeMed" value = "medium" /><label for = "sizeMed">Female</label>
+                <input type = "radio" name = "radSize" id = "sizeLarge" value = "large" /><label for = "sizeLarge">Others</label>
+            </form>
+        <br>
+        <input type="checkbox" id="DrivingLicence" value="2"><label for="DrivingLicence">DL-2 wheeler :</label><br>
+        <input type="checkbox" id="DL" value="3"><label for="DL">DL-4 wheeler :</label>
+        <p><label for="Weight_Range">Weight: </label> <input type="range" id="Weight_Range"  class="slider" min="0" max="100" value="75">
+        <span  class="slider_label"></span></p>
+      </form>
+    </div> 
+
+    <script type="text/javascript">
+    $(function()
+    {
+      $('.slider').on('input change', function(){
+        $(this).next($('.slider_label')).html(this.value);
+      });
+      $('.slider_label').each(function(){
+        var value = $(this).prev().attr('value');
+        $(this).html(value);
+      });
+    })
+  </script>
+    <br>
+    <label for="heavy-Vehicle">Vehicle</label>
+    <select id="heavy-Vehicle">
+      <option value="volvo">Volvo</option>
+      <option value="saab">suzuki</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <br><br>
+    <label for="fruits"> Fruits : </label>
+    <select id="fruits">
+      <option value="Mango">Mango</option>
+      <option value="Apple">Apple</option>
+      <option value="banana">banana</option>
+      <option value="strawberry">strawberry</option>
+    </select> 
+
+    <br><br>
+    <button style="margin-left:4%; min-width: 15%;font-weight: bold;" onclick="myFunction()">Alert Button</button>
+    <button  style="min-width:15%;font-weight: bold;" id="myBtn">Modal popup</button>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span style="color: black;font-weight: bold;" class="close">&times;</span>
+        <body>
+          <h1 style="font-family:Comic Sans Ms;text-align:left;font-size:20pt;color:block";>Signup Here..</h1>
+          <form name="login">
+            <label for="Email"> UserName </label><input type="text" id="Email" />
+            <label for="secretcode"> OTP </label><input type="password" id="secretcode" /><br><br>
+            <input style="min-width: 16%;margin-left:7%;font-weight: bold; alignment-baseline: central;" script type="button" onclick="check(this.form)" value="Login"/>
+            <input style="min-width: 16%;font-weight: bold;" type="reset" value="Cancel"/>
+          </form>
+        </body>
+      </div>
+    </div>    
+    <hr>
+  </div>
+<script>
+  window._wfx_settings={"locale" : "hi"};
+  var num1 = 25;
+  var num2 = 100;
+  var oneYear = 3.154e+10;
+  var user_id = 354534;
+  // string dates
+  var d1 = "09/26/2018"; // sep 26th
+  var d2 = "10/15/2018"; // oct 15th
+  var d3 = new Date(); // current date and time
+  var d4 = new Date(1538632506000); // Thursday, October 4, 2018 5:55:06 AM
+  var d5 = new Date("October 10, 2018 11:13:00"); // string
+  var d6 = new Date(2018, 9, 2); //(year, month, day) oct 2nd 2018
+  var d7 = new Date(2018, 9, 2, 13, 13, 13, 13); //(year, month, day, hours, minutes, seconds, milliseconds)
+  var number1 = 5;
+
+  function myFunction() {
+    alert("I am an alert box!");
+  }
+  var modal = document.getElementById('myModal');
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+ function mypopup () {
+ 	popup("this is a pop up");
+ }
+  }
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    $("#navigation").load("navigation.html");
+  });
+  $(function() {
+    $('#blood-donor').change(function(){
+      if($('#blood-donor').val() == 'yes') {
+        $('#dynadiv').show();
+      } else {
+        $('#dynadiv').hide();
+      }
+    });
+  });
+</script>
+<script type="text/javascript">
+  window.addEventListener("message", function(event){console.log(event);} );
+  setTimeout(function(){   window.postMessage(message); }, 2000);
+</script>
+</body>
+</html>
+
+
+
+
+<!-- _wfx_settings.debug_mode = true; -->
+<!-- _wfx_refresh(); -->
+<!-- sid=4tp0ont7xgvr0utf;path=/;uid=45a232b0-b846-11e9-888a-9600002bf2b8;path=/;  -->
+<!-- var s = document.createElement( 'script' );
+s.setAttribute( 'src', "//uat.whatfix.com/35de8db0-b846-11e9-888a-9600002bf2b8/embed/embed.nocache.js" );
+document.body.appendChild( s );-->
+<!-- Sysadmin@Quicko@1 -->
