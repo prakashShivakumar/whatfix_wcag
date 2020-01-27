@@ -91,16 +91,16 @@
     <br><br>
     <button style="margin-left:2%; min-width: 15%;font-weight: bold;" onclick="myFunction()">Alert Button</button>
     <button  style="min-width:15%;font-weight: bold;" id="myBtn">Modal popup</button>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span style="color: black;font-weight: bold;" class="close">&times;</span>
         <body>
+          <div id="myModal" class="modal">
+          <div class="modal-content">
           <h1 style="font-family:Comic Sans Ms;text-align:left;font-size:20pt;color:block";>Signup Here..</h1>
           <form name="login">
             <label for="Email"> UserName </label><input type="text" id="Email" />
             <label for="secretcode"> OTP </label><input type="password" id="secretcode" /><br><br>
             <input style="min-width: 16%;margin-left:7%;font-weight: bold; alignment-baseline: central;" script type="button" onclick="check(this.form)" value="Login"/>
             <input style="min-width: 16%;font-weight: bold;" type="reset" value="Cancel"/>
+            <button type="button" style="color: black;font-weight:bold;box-sizing: 10px" class="close">close</button>
           </form>
         </body>
       </div>
